@@ -14,6 +14,10 @@
 		C121D6E72B38B61B00EA46C9 /* StayActivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D6E62B38B61B00EA46C9 /* StayActivTests.swift */; };
 		C121D6F12B38B61B00EA46C9 /* StayActivUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D6F02B38B61B00EA46C9 /* StayActivUITests.swift */; };
 		C121D6F32B38B61B00EA46C9 /* StayActivUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D6F22B38B61B00EA46C9 /* StayActivUITestsLaunchTests.swift */; };
+		C121D7002B38B67C00EA46C9 /* StayActivTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D6FF2B38B67C00EA46C9 /* StayActivTabView.swift */; };
+		C121D7022B38B74600EA46C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7012B38B74600EA46C9 /* HomeView.swift */; };
+		C121D7042B38B7B400EA46C9 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7032B38B7B400EA46C9 /* ActivityCard.swift */; };
+		C121D7062B38BD7800EA46C9 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7052B38BD7800EA46C9 /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		C121D6EC2B38B61B00EA46C9 /* StayActivUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayActivUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C121D6F02B38B61B00EA46C9 /* StayActivUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayActivUITests.swift; sourceTree = "<group>"; };
 		C121D6F22B38B61B00EA46C9 /* StayActivUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayActivUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C121D6FF2B38B67C00EA46C9 /* StayActivTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayActivTabView.swift; sourceTree = "<group>"; };
+		C121D7012B38B74600EA46C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C121D7032B38B7B400EA46C9 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		C121D7052B38BD7800EA46C9 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		C121D7072B38BF8E00EA46C9 /* StayActiv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StayActiv.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +103,15 @@
 		C121D6D42B38B61900EA46C9 /* StayActiv */ = {
 			isa = PBXGroup;
 			children = (
+				C121D7072B38BF8E00EA46C9 /* StayActiv.entitlements */,
 				C121D6D52B38B61900EA46C9 /* StayActivApp.swift */,
 				C121D6D72B38B61900EA46C9 /* ContentView.swift */,
 				C121D6D92B38B61B00EA46C9 /* Assets.xcassets */,
 				C121D6DB2B38B61B00EA46C9 /* Preview Content */,
+				C121D6FF2B38B67C00EA46C9 /* StayActivTabView.swift */,
+				C121D7012B38B74600EA46C9 /* HomeView.swift */,
+				C121D7032B38B7B400EA46C9 /* ActivityCard.swift */,
+				C121D7052B38BD7800EA46C9 /* HealthManager.swift */,
 			);
 			path = StayActiv;
 			sourceTree = "<group>";
@@ -258,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C121D6D82B38B61900EA46C9 /* ContentView.swift in Sources */,
+				C121D7062B38BD7800EA46C9 /* HealthManager.swift in Sources */,
+				C121D7022B38B74600EA46C9 /* HomeView.swift in Sources */,
+				C121D7002B38B67C00EA46C9 /* StayActivTabView.swift in Sources */,
 				C121D6D62B38B61900EA46C9 /* StayActivApp.swift in Sources */,
+				C121D7042B38B7B400EA46C9 /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StayActiv/StayActiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StayActiv/Preview Content\"";
 				DEVELOPMENT_TEAM = 4Q398HUTA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to try all the features of the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StayActiv/StayActiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StayActiv/Preview Content\"";
 				DEVELOPMENT_TEAM = 4Q398HUTA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to try all the features of the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
